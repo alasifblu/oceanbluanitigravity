@@ -27,15 +27,11 @@ body {
 }
 
 .glow-lime {
-  box-shadow: 0 0 35px -5px rgba(212, 255, 0, 0.25);
+  box-shadow: 0 0 35px -5px rgba(212, 255, 0, 0.35);
 }
 
 .border-glass {
   border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.border-glass-hover:hover {
-  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .glass-panel {
@@ -46,10 +42,10 @@ body {
 }
 
 .glass-card {
-  background: rgba(16, 23, 42, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(16, 23, 42, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Grid overlay background */
@@ -62,11 +58,20 @@ body {
 
 /* Radial ambient lighting */
 .ambient-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(0, 102, 255, 0.18) 0%, rgba(5, 7, 14, 0) 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(0, 102, 255, 0.22) 0%, rgba(5, 7, 14, 0) 70%);
 }
 
 .ambient-center-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.12) 0%, rgba(5, 7, 14, 0) 60%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, rgba(5, 7, 14, 0) 60%);
+}
+
+/* 3D Perspective Ribbon */
+.perspective-container {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
 }
 
 /* Smooth custom scrollbar */
