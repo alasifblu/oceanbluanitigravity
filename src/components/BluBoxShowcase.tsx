@@ -5,7 +5,7 @@ import { Cpu, Zap, ShieldCheck, Box, Server, Sparkles, CheckCircle2 } from "luci
 
 export default function BluBoxShowcase() {
   return (
-    <section id="blu-box" className="relative py-24 md:py-32 border-b border-white/10 bg-[#05070E] overflow-hidden">
+    <section id="blu-box" className="relative py-24 md:py-32 bg-[#05070E] overflow-hidden">
       {/* Background Ambient Glow */}
       <div className="pointer-events-none absolute bottom-0 right-0 size-[600px] rounded-full bg-[#0066FF]/10 blur-[130px] -z-10"></div>
 
@@ -33,7 +33,7 @@ export default function BluBoxShowcase() {
               className="group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0A0E1A]/80 p-6 backdrop-blur-xl transition-all duration-300 hover:border-[#0066FF]/40 hover:bg-[#10172A] hover:shadow-[0_0_30px_rgba(0,102,255,0.15)]"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                <div className="flex items-center justify-between  pb-4">
                   <span className="font-mono text-2xl font-black text-[#0066FF]">
                     {pillar.step}
                   </span>
@@ -95,7 +95,7 @@ export default function BluBoxShowcase() {
                     <p className="mt-1 font-mono text-xs font-semibold text-[#D4FF00]">
                       {model.capacity}
                     </p>
-                    <p className="mt-3 text-xs text-[#94A3B8] border-b border-white/10 pb-4">
+                    <p className="mt-3 text-xs text-[#94A3B8]  pb-4">
                       Target: {model.target}
                     </p>
 

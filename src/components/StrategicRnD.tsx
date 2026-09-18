@@ -18,7 +18,7 @@ export default function StrategicRnD() {
   };
 
   return (
-    <section id="rnd" className="relative py-24 md:py-32 border-b border-white/10 bg-[#05070E]">
+    <section id="rnd" className="relative py-24 md:py-32 bg-[#05070E]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl">
@@ -42,7 +42,7 @@ export default function StrategicRnD() {
               className="group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0A0E1A]/80 p-8 backdrop-blur-xl transition-all duration-300 hover:border-white/25 hover:bg-[#10172A] hover:shadow-[0_0_35px_rgba(0,102,255,0.15)]"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-white/10 pb-5">
+                <div className="flex items-center justify-between  pb-5">
                   <div className="flex size-12 items-center justify-center rounded-xl border border-white/10 bg-[#05070E]">
                     {getIcon(item.id)}
                   </div>

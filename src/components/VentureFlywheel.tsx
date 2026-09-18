@@ -7,7 +7,7 @@ export default function VentureFlywheel() {
   const { concord, solar } = VENTURE_FLYWHEEL;
 
   return (
-    <section id="concord" className="relative py-24 md:py-32 border-b border-white/10 bg-[#05070E] overflow-hidden">
+    <section id="concord" className="relative py-24 md:py-32 bg-[#05070E] overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl">
@@ -28,7 +28,7 @@ export default function VentureFlywheel() {
           {/* Concord Card */}
           <div className="relative flex flex-col justify-between rounded-3xl border border-white/15 bg-gradient-to-b from-[#10172A] to-[#0A0E1A] p-8 md:p-10 backdrop-blur-xl shadow-[0_0_40px_rgba(168,85,247,0.1)]">
             <div>
-              <div className="flex items-center justify-between border-b border-white/10 pb-5">
+              <div className="flex items-center justify-between  pb-5">
                 <div className="flex size-12 items-center justify-center rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/30">
                   <Rocket className="size-6" />
                 </div>
@@ -76,7 +76,7 @@ export default function VentureFlywheel() {
           {/* Blu Solar Card */}
           <div className="relative flex flex-col justify-between rounded-3xl border border-white/15 bg-gradient-to-b from-[#10172A] to-[#0A0E1A] p-8 md:p-10 backdrop-blur-xl shadow-[0_0_40px_rgba(255,85,0,0.1)]">
             <div>
-              <div className="flex items-center justify-between border-b border-white/10 pb-5">
+              <div className="flex items-center justify-between  pb-5">
                 <div className="flex size-12 items-center justify-center rounded-xl bg-[#FF5500]/20 text-[#FF5500] border border-[#FF5500]/30">
                   <Sun className="size-6" />
                 </div>

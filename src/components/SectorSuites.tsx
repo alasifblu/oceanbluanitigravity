@@ -35,7 +35,7 @@ export default function SectorSuites() {
   ];
 
   return (
-    <section id="sectors" className="relative py-24 md:py-32 border-b border-white/10 bg-[#05070E] overflow-hidden">
+    <section id="sectors" className="relative py-24 md:py-32 bg-[#05070E] overflow-hidden">
       {/* Ambient background glow */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[700px] rounded-full bg-[#0066FF]/10 blur-[140px] -z-10"></div>
 

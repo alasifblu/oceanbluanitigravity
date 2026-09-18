@@ -27,7 +27,7 @@ export default function SecurityCompliance() {
   ];
 
   return (
-    <section id="security" className="relative py-24 md:py-32 border-b border-white/10 bg-[#05070E]">
+    <section id="security" className="relative py-24 md:py-32 bg-[#05070E]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-400 font-mono uppercase tracking-wider">

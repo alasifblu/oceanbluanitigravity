@@ -5,7 +5,7 @@ import { AlertTriangle, Wrench, ShieldCheck, Check } from "lucide-react";
 
 export default function AgitationGrid() {
   return (
-    <section id="dilemma" className="relative py-24 md:py-32 border-b border-white/10 bg-[#05070E]">
+    <section id="dilemma" className="relative py-24 md:py-32 bg-[#05070E] overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl">
