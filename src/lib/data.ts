@@ -4,12 +4,11 @@ export interface NavItem {
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Blu Box™", href: "#blu-box" },
-  { label: "Sector Suites (21)", href: "#sectors" },
-  { label: "The Deployment Dilemma", href: "#dilemma" },
-  { label: "Strategic R&D", href: "#rnd" },
-  { label: "Concord Incubator", href: "#concord" },
-  { label: "Security & Air-Gap", href: "#security" },
+  { label: "Home", href: "#" },
+  { label: "About Us", href: "#about" },
+  { label: "Sovereign Suites", href: "#solutions" },
+  { label: "R&D & Solar", href: "#solutions" },
+  { label: "Terminal", href: "#terminal" },
 ];
 
 export const TELEMETRY_FEED = [
