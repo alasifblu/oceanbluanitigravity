@@ -17,7 +17,7 @@ export default function HeroCarousel() {
     {
       id: "card-roi",
       tag: "Financial Sovereignty",
-      title: "zsh.00 Token Egress",
+      title: "$0.00 Token Egress",
       detail: "Unlimited local queries",
       metric: "Fixed Enterprise Asset",
       color: "#0066FF",

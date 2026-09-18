@@ -108,80 +108,123 @@ export default function SectorSuites() {
         </div>
 
         {/* Active Sector Detail Bento Showcase */}
-        <div className="mt-12 rounded-3xl border border-white/15 bg-gradient-to-b from-[#10172A] to-[#0A0E1A] p-8 md:p-12 backdrop-blur-2xl shadow-[0_0_50px_-15px_rgba(0,102,255,0.25)]">
-          <div className="grid lg:grid-cols-12 gap-8 items-center">
-            {/* Left: Sector Specs */}
-            <div className="lg:col-span-7 flex flex-col gap-5">
-              <div className="flex items-center gap-3 font-mono text-xs text-[#0066FF]">
-                <span className="rounded border border-[#0066FF]/30 bg-[#0066FF]/10 px-2.5 py-0.5 font-bold">
-                  {activeSector.code}
-                </span>
-                <span>ENTERPRISE SPECIFICATION</span>
-              </div>
+        {(() => {
+          const sectorVisuals: Record<string, { image: string; tag: string; caption: string }> = {
+            "real-estate": {
+              image: "/assets/naaas_realestate_os.jpg",
+              tag: "3D CAD & Urban GIS",
+              caption: "NAAAS Urban OS: Autonomous deed compliance & spatial asset analytics",
+            },
+            "hospitality": {
+              image: "/assets/restaurant_pos_system.jpg",
+              tag: "WhatsApp Conversational AI",
+              caption: "Direct POS & KDS terminal with autonomous table ordering bot",
+            },
+            "healthcare": {
+              image: "/assets/healthcare_diagnostic_hub.jpg",
+              tag: "Air-Gapped Clinical Hub",
+              caption: "Zero-egress EHR, 3D anatomical triage & localized radiology inference",
+            },
+            "education": {
+              image: "/assets/education_neural_lms.jpg",
+              tag: "Neural Knowledge LMS",
+              caption: "Autonomous syllabus synthesis, multilingual translator & learner graph",
+            },
+            "logistics": {
+              image: "/assets/railway_command_center.jpg",
+              tag: "National Rail Command OS",
+              caption: "Mission telemetry, locomotive health monitoring & route optimization",
+            },
+          };
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-white">
-                {activeSector.title}
-              </h3>
+          const visual = sectorVisuals[activeSector.id] || sectorVisuals["real-estate"];
 
-              {/* Before vs After Grid */}
-              <div className="grid sm:grid-cols-2 gap-4 mt-2">
-                {/* Before */}
-                <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-4">
-                  <span className="font-mono text-[0.68rem] uppercase font-bold text-red-400">
-                    Legacy Human Bottleneck
-                  </span>
-                  <p className="mt-2 text-xs text-[#94A3B8] leading-relaxed">
-                    {activeSector.bottleneck}
-                  </p>
+          return (
+            <div className="mt-12 rounded-3xl border border-white/15 bg-gradient-to-b from-[#10172A] to-[#0A0E1A] p-6 md:p-10 backdrop-blur-2xl shadow-[0_0_50px_-15px_rgba(0,102,255,0.25)]">
+              <div className="grid lg:grid-cols-12 gap-8 items-center">
+                {/* Visual System UI Preview */}
+                <div className="lg:col-span-7 relative group">
+                  <div className="relative overflow-hidden rounded-2xl border border-white/15 shadow-[0_0_35px_rgba(0,102,255,0.3)] bg-[#05070E]">
+                    <img
+                      src={visual.image}
+                      alt={activeSector.title}
+                      className="w-full h-[280px] sm:h-[360px] object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#05070E]/80 via-transparent to-transparent"></div>
+
+                    {/* Top Badges */}
+                    <div className="absolute top-4 left-4 flex items-center gap-2">
+                      <span className="rounded-md border border-[#0066FF]/40 bg-black/60 px-2.5 py-1 font-mono text-[0.68rem] font-bold text-[#0066FF] backdrop-blur-md">
+                        {activeSector.code}
+                      </span>
+                      <span className="rounded-md border border-emerald-500/30 bg-black/60 px-2.5 py-1 font-mono text-[0.68rem] text-emerald-400 backdrop-blur-md">
+                        ● {visual.tag}
+                      </span>
+                    </div>
+
+                    {/* Bottom Caption Bar */}
+                    <div className="absolute bottom-3 inset-x-3 rounded-xl border border-white/10 bg-black/75 p-3 backdrop-blur-md">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="font-semibold text-white truncate">{visual.caption}</span>
+                        <span className="font-mono text-[0.68rem] text-[#D4FF00] shrink-0 ml-2">Verified OS</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                {/* After */}
-                <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4">
-                  <span className="font-mono text-[0.68rem] uppercase font-bold text-emerald-400">
-                    Autonomous Blu OS Execution
-                  </span>
-                  <p className="mt-2 text-xs text-[#F8FAFC] leading-relaxed">
-                    {activeSector.solution}
-                  </p>
-                </div>
-              </div>
+                {/* Sector Specs & Outcomes */}
+                <div className="lg:col-span-5 flex flex-col gap-5">
+                  <div>
+                    <div className="flex items-center gap-2 font-mono text-xs text-[#0066FF]">
+                      <span className="font-bold">ENTERPRISE SPECIFICATION</span>
+                      <span>•</span>
+                      <span className="text-[#94A3B8]">{activeSector.flagship}</span>
+                    </div>
+                    <h3 className="mt-2 text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                      {activeSector.title}
+                    </h3>
+                  </div>
 
-              {/* Flagship Product Callout */}
-              <div className="mt-2 flex items-center gap-2 rounded-xl border border-white/10 bg-[#05070E] p-4 text-xs">
-                <CheckCircle2 className="size-4 text-[#D4FF00] shrink-0" />
-                <div>
-                  <span className="text-[#94A3B8]">Flagship Platform: </span>
-                  <span className="font-semibold text-white">{activeSector.flagship}</span>
+                  {/* Before vs After Grid */}
+                  <div className="grid gap-3">
+                    <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-3.5">
+                      <span className="font-mono text-[0.65rem] uppercase font-bold text-red-400">
+                        Legacy Human Bottleneck
+                      </span>
+                      <p className="mt-1 text-xs text-[#94A3B8] leading-relaxed">
+                        {activeSector.bottleneck}
+                      </p>
+                    </div>
+
+                    <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-3.5">
+                      <span className="font-mono text-[0.65rem] uppercase font-bold text-emerald-400">
+                        Autonomous Blu OS Execution
+                      </span>
+                      <p className="mt-1 text-xs text-[#F8FAFC] leading-relaxed">
+                        {activeSector.solution}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Verified Metric Card */}
+                  <div className="rounded-xl border border-[#D4FF00]/20 bg-[#D4FF00]/5 p-4 flex items-center justify-between">
+                    <div>
+                      <span className="font-mono text-[0.65rem] uppercase text-[#94A3B8]">Verified Production ROI</span>
+                      <div className="font-mono text-xl font-black text-[#D4FF00]">{activeSector.metrics}</div>
+                    </div>
+                    <a
+                      href="#terminal"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-[#D4FF00] px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#05070E] transition-all hover:bg-[#bce400]"
+                    >
+                      <span>Deploy</span>
+                      <ArrowRight className="size-3.5" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Right: Verified Outcome Metrics Card */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-[#05070E]/80 p-8 text-center relative overflow-hidden">
-              <div className="absolute -right-10 -bottom-10 size-40 rounded-full bg-[#D4FF00]/10 blur-3xl"></div>
-              
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#94A3B8]">
-                VERIFIED OUTCOME
-              </span>
-              
-              <p className="mt-4 font-mono text-xl sm:text-2xl font-bold text-[#D4FF00] leading-tight">
-                {activeSector.metrics}
-              </p>
-
-              <p className="mt-4 text-xs text-[#94A3B8] max-w-xs leading-relaxed">
-                Measured across production enterprise deployments with zero cloud API token exposure.
-              </p>
-
-              <a
-                href="#terminal"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-5 py-2.5 text-xs font-bold text-white transition-all hover:bg-white/20"
-              >
-                <span>Deploy {activeSector.title.split(",")[0]} Suite</span>
-                <ArrowRight className="size-3.5" />
-              </a>
-            </div>
-          </div>
-        </div>
+          );
+        })()}
 
         {/* 4 Bottom Metrics Row (from Pinterest reference website design for tech.jpg) */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-10 text-center">

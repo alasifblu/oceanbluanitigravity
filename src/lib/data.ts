@@ -234,6 +234,13 @@ export const STRATEGIC_RND = [
     status: "Feasibility Study Active",
   },
   {
+    id: "solar",
+    title: "Blu Solar: Rooftop Photovoltaic & Micro-Drip System",
+    category: "Climate Tech & Clean Energy",
+    desc: "Autonomous smart rooftop solar harvesting combined with IoT micro-drip irrigation and thermal cooling pipes, maximizing solar cell efficiency while enabling urban agricultural micro-gardens.",
+    status: "Telemetry & Pilot Deployed",
+  },
+  {
     id: "nsda",
     title: "NSDA Global Labor Competency Mapping",
     category: "Workforce & Talent Export",

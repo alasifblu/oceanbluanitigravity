@@ -7,11 +7,17 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           {/* Brand & Mission */}
           <div className="md:col-span-2 flex flex-col gap-4">
-            <div className="flex items-center gap-2 text-white font-bold text-base tracking-wider">
-              <span className="flex h-6 w-6 items-center justify-center rounded bg-[#0066FF] text-white font-mono text-xs">
-                OB
+            <div className="flex items-center gap-3">
+              <div className="relative h-8 w-28 overflow-hidden rounded-md border border-[#0066FF]/30 shadow-[0_0_15px_rgba(0,102,255,0.3)]">
+                <img
+                  src="/assets/oceanblu-wordmark.jpeg"
+                  alt="OceanBlu"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <span className="font-mono text-[0.65rem] uppercase tracking-widest text-[#94A3B8]">
+                TRUST BUILT GROW
               </span>
-              <span>OCEAN<span className="text-[#0066FF]">BLU</span></span>
             </div>
             <p className="max-w-sm text-xs leading-relaxed text-[#94A3B8]">
               We technologically transform large traditional businesses and automate 70–80% of their workflow and R&D with sovereign, on-premise AI appliances.

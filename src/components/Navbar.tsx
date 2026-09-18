@@ -11,15 +11,16 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 transition-all duration-300 glass-panel border-b border-white/[0.08] backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Brand Logo */}
-        <a href="#" className="group flex items-center gap-2.5 text-lg font-semibold tracking-tight text-white">
-          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#0066FF] text-white shadow-[0_0_20px_rgba(0,102,255,0.6)] font-mono text-xs font-bold">
-            OB
-          </span>
-          <span className="tracking-wider font-bold">
-            OCEAN<span className="text-[#0066FF]">BLU</span>
-          </span>
-          <span className="hidden sm:inline-block ml-1 rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[0.68rem] font-mono text-[#94A3B8]">
-            SOVEREIGN AI
+        <a href="#" className="group flex items-center gap-3 text-lg font-semibold tracking-tight text-white">
+          <div className="relative h-8 w-28 overflow-hidden rounded-md border border-[#0066FF]/40 shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-transform group-hover:scale-105">
+            <img
+              src="/assets/oceanblu-wordmark.jpeg"
+              alt="OceanBlu"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <span className="hidden sm:inline-block rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[0.65rem] font-mono text-[#94A3B8] tracking-widest">
+            TRUST BUILT GROW
           </span>
         </a>
 

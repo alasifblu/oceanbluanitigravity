@@ -92,8 +92,8 @@ export default function MissionBento() {
                 </span>
                 <Zap className="size-4 text-[#0066FF]" />
               </div>
-              <div className="mt-3 text-5xl font-black tracking-tight text-white">
-                zsh
+              <div className="mt-3 text-5xl font-black tracking-tight text-white font-mono">
+                $0.00
               </div>
             </div>
             <div className="mt-10 border-t border-white/10 pt-5">
