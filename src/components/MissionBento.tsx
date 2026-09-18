@@ -25,19 +25,14 @@ export default function MissionBento() {
             </span>
           </div>
 
-          {/* Right Display Statement with Inline Icons */}
-          <div className="lg:col-span-9">
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#05070E] leading-[1.12]">
-              A global deep-tech partner dedicated to building{" "}
-              <span className="inline-flex items-center justify-center align-middle mx-1 size-9 sm:size-11 rounded-full bg-[#0066FF] text-white shadow-[0_0_20px_rgba(0,102,255,0.4)]">
-                <Clock className="size-5 sm:size-6" />
-              </span>{" "}
-              smarter and{" "}
-              <span className="inline-flex items-center justify-center align-middle mx-1 size-9 sm:size-11 rounded-full bg-[#D4FF00] text-[#05070E] shadow-[0_0_20px_rgba(212,255,0,0.5)]">
-                <Lightbulb className="size-5 sm:size-6" />
-              </span>{" "}
-              more adaptive enterprises.
+          {/* Right Display Statement with Structured, Non-Overlapping Typography */}
+          <div className="lg:col-span-9 flex flex-col gap-4">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#05070E] leading-[1.15]">
+              Engineering Sovereign Autonomy for Critical Enterprise Industries.
             </h2>
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl">
+              Traditional conglomerates, healthcare networks, and public logistics operators cannot surrender proprietary records to foreign cloud LLMs. OceanBlu architects deterministic on-premise compute that keeps your institutional intelligence completely private, air-gapped, and permanently owned.
+            </p>
           </div>
         </div>
 

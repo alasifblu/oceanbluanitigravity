@@ -34,7 +34,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden xl:flex items-center gap-6" aria-label="Primary Navigation">
+        <nav className="hidden lg:flex items-center gap-6" aria-label="Primary Navigation">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}
@@ -60,7 +60,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="inline-flex xl:hidden size-9 items-center justify-center rounded-lg border border-white/10 text-white hover:bg-white/5"
+            className="inline-flex lg:hidden size-9 items-center justify-center rounded-lg border border-white/10 text-white hover:bg-white/5"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -70,7 +70,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="xl:hidden border-t border-white/[0.08] bg-[#05070E]/95 px-6 py-5 backdrop-blur-2xl">
+        <div className="lg:hidden border-t border-white/[0.08] bg-[#05070E]/95 px-6 py-5 backdrop-blur-2xl">
           <div className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
               <a
